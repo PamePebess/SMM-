@@ -67,9 +67,9 @@ const useStyles = makeStyles((theme) => ({
 export default function SignInSide(props) {
   const classes = useStyles();
 
-  //let click = () => {
- //   console.log('Home')
- // }
+//let click = () => {
+//   console.log('Home')
+// }
 
   return (
 

@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const DropdownButtons = () => {
   return (
     <div>
-      <DropdownButton id="dropdown-item-button" title="Jornada">
+      <DropdownButton id="dropdown-item-button" title="Jornada"> */}
         <Dropdown.Item as="button">Diurno</Dropdown.Item>
         <Dropdown.Item as="button">Vespertino</Dropdown.Item>
         <Dropdown.Item as="button">Completa</Dropdown.Item>
