@@ -1,4 +1,5 @@
 import "./App.css";
+import "./css/FinalView.css"
 import Navbranch from "./component/Navbranch";
 import {
   BrowserRouter as Router,
@@ -15,6 +16,7 @@ import TypografyPage1 from './component/TypographyPage1';
 import FooterPage1 from "./component/FooterPage1";
 import Selector from './component/Selector'
 import Reservation from './component/Reservation'
+import FinalView from './component/FinalView'
 
 
 
@@ -42,12 +44,14 @@ function App() {
             <Navbranch />
             <TypografyPage1 />
             <Selector/>
-
             <FooterPage1 />
           {/* final pagina uno */}
           </Route>
           <Route path="/reservation">
           <Reservation/>
+          </Route>
+          <Route path="/finalview">
+            <FinalView/>
           </Route>
         </Switch>
         {/*</ThemeProvider>*/}

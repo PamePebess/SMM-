@@ -27,13 +27,7 @@ export default function ControlledOpenSelect() {
   ///////States JOURNAL and PEOPLE////////
 
 const [journalState, setJournalState] = /*useState([]);*/useLocalStorage('journalState', '')
-<<<<<<< HEAD
-//onsole.log(journalState)
 const [peopleState, setPeopleState] = /*useState([]); */ useLocalStorage('peopleState', '')
-//console.log(peopleState)
-=======
-const [peopleState, setPeopleState] = /*useState([]); */ useLocalStorage('peopleState', '')
->>>>>>> 72b56ecee92239cb9d9c3f016ed6140a22dd16d4
 
 
 ///////// FUNCION SETSTATEJOURNAL
@@ -110,7 +104,7 @@ const [open, setOpen] = React.useState(false);
 
       <div>
       <FormControl className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">N de Personas</InputLabel>
+        <InputLabel id="demo-controlled-open-select-label">N° de Personas</InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
           id="demo-controlled-open-select"

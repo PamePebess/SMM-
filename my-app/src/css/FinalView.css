@@ -1,0 +1,25 @@
+body {
+    background-color: #6785C1;
+}
+h1 {
+    font-family: Helvetica;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 70px;
+}
+h3 {
+    font-family: Helvetica;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 150px;
+    
+}
+h5 {
+    font-family: Helvetica;
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+    
+}
