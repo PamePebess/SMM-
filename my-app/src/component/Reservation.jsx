@@ -5,6 +5,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Grid from '@material-ui/core/Grid';
 import ListItemText from '@material-ui/core/ListItemText';
+import mapa_1 from '../img/mapa_1.png'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,11 +29,12 @@ export default function NestedList() {
   };
 
   return (
-    <Grid container component="main">
-      <Grid item xs={3}>
+
+  <Grid container component="main">
+      <img src={mapa_1} alt='mapaeveris' className='mapa'/>
+     <Grid item xs={3}>
         <List
             component="nav"
-
             aria-labelledby="nested-list-subheader"
             subheader={
               <ListSubheader component="div" id="nested-list-subheader">

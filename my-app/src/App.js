@@ -47,7 +47,10 @@ function App() {
           {/* final pagina uno */}
           </Route>
           <Route path="/reservation">
+          <Navbranch />
+          
           <Reservation/>
+          <FooterPage1 />
           </Route>
           <Route path="/finalview">
             <FinalView/>
