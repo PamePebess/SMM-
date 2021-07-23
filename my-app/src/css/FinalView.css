@@ -1,24 +1,33 @@
-body {
+#finalView {
     background-color: #6785C1;
-}
-h1 {
+    height: 100vh;
+    
+}    
+    
+#title {
     font-family: Helvetica;
     color: white;
     font-weight: bolder;
     text-align: center;
-    margin-top: 70px;
-}
-h3 {
-    font-family: Helvetica;
-    color: white;
-    text-align: center;
-    font-weight: bolder;
-    margin-top: 150px;
+    margin-top: 100px;
     
 }
-h5 {
+#subtitle {
     font-family: Helvetica;
     color: white;
     text-align: center;
-    margin-top: 200px;
+    font-weight: bolder;
+    margin-top: 100px;
+    
+}
+#cancel {
+    font-family: Helvetica;
+    color: white;
+    text-align: center;
+    margin-top: 450px;
+}
+@media (max-width: 640px){
+    #title #subtitle #cancel {
+        display: none;
+    }
 }

@@ -1,5 +1,5 @@
 import "./App.css";
-import "./css/FinalView.css"
+//import "./css/FinalView.css"
 import Navbranch from "./component/Navbranch";
 import {
   BrowserRouter as Router,
@@ -52,6 +52,7 @@ function App() {
           </Route>
           <Route path="/finalview">
             <FinalView/>
+            <FooterPage1 />
           </Route>
         </Switch>
         {/*</ThemeProvider>*/}
