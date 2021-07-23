@@ -1,6 +1,7 @@
 import React from "react";
+import styles from '../css/FinalView.css';
 
-const finalView = () => {
+const FinalView = () => {
   return (
   <div>
   <h1>¡FELICITACIONES!</h1>
@@ -11,4 +12,4 @@ const finalView = () => {
   </div>
   );
 };
-export default finalView;
+export default FinalView;
