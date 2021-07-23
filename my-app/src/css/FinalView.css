@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-#finalView {
-    background-color: #6785C1;
-    height: 100vh;
-    
-}    
-    
-=======
-
-
 #finalViewContainer{
     display:flex;
     height: 100vh;
@@ -21,21 +11,14 @@
 }
 
 
->>>>>>> 52c6265a7d1d72ad40322424bf557f73e1cb57ba
 #title {
     font-family: Helvetica;
     color: white;
     font-weight: bolder;
     text-align: center;
-<<<<<<< HEAD
-    margin-top: 100px;
-    
-}
-=======
 
 }
 
->>>>>>> 52c6265a7d1d72ad40322424bf557f73e1cb57ba
 #subtitle {
     font-family: Helvetica;
     color: white;
@@ -48,14 +31,6 @@
     font-family: Helvetica;
     color: white;
     text-align: center;
-<<<<<<< HEAD
-    margin-top: 450px;
-}
-@media (max-width: 640px){
-    #title #subtitle #cancel {
-        display: none;
-    }
-=======
     margin-top: 200px;
 }
 
@@ -70,5 +45,4 @@
     text-align: center;
     font-weight: bolder;
     margin-top: 150px;
->>>>>>> 52c6265a7d1d72ad40322424bf557f73e1cb57ba
 }

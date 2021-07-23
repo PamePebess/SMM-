@@ -1,18 +1,5 @@
 import React from "react";
 import styles from '../css/FinalView.css';
-<<<<<<< HEAD
-
-
-const finalView = () => {
-  return (
-    
-     <div id="finalView">
-  
-    <h1 id="title">¡FELICITACIONES!</h1>
-  <h3 id="subtitle">TU RESERVA ESTÁ CONFIRMADA</h3>
-  <h4></h4>
-  <h5 id="cancel">Si necesitas cancelar pincha <b>AQUÍ</b></h5>
-=======
 import {useLocalStorage} from '../useLocalStorage'
 
 
@@ -34,7 +21,6 @@ const FinalView = () => {
         </ul>
     <h5 id = 'cancel'>Si necesitas cancelar pincha <a href = '/start' id = 'here'><b>AQUÍ</b></a></h5>
   </div>
->>>>>>> 52c6265a7d1d72ad40322424bf557f73e1cb57ba
   </div>
    
   );
