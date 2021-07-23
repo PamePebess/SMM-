@@ -7,6 +7,7 @@ import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 import ReservationButton from './ReservationButton';
 import Calendar from './Calendar'
+import {useLocalStorage} from '../useLocalStorage'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -23,25 +24,25 @@ const useStyles = makeStyles((theme) => ({
 export default function ControlledOpenSelect() {
   const classes = useStyles();
 
-  ///////JOURNAL////////
+  ///////States JOURNAL and PEOPLE////////
 
-const [journalState, setJournalState] = useState([]);
-const [peopleState, setPeopleState] = useState([]);  
+const [journalState, setJournalState] = /*useState([]);*/useLocalStorage('journalState', '')
+const [peopleState, setPeopleState] = /*useState([]); */ useLocalStorage('peopleState', '')
 
 
-
-  const handleChange = (e) => {
+///////// FUNCION SETSTATEJOURNAL
+ /* const handleChange = (e) => {
     const journalValue = [e.target.value];  
     setJournalState(journalValue)
-  };
+  };*/
 
-  ///////Personas///////
-  const handlePeopleChange = (e) => {
+  ///////FUNCION SETSTATE///////
+  /*const handlePeopleChange = (e) => {
     const peopleValue = [e.target.value];    
     setPeopleState(peopleValue)
   };
 const userReservation= [...journalState, ...peopleState];
-console.log(userReservation)
+console.log(userReservation)*/
 
 
   
@@ -64,6 +65,9 @@ const [open, setOpen] = React.useState(false);
       console.log('click')
   }
   
+  
+
+
 
   return (
     <div>
@@ -82,7 +86,7 @@ const [open, setOpen] = React.useState(false);
           onClose={handleClose}
           onOpen={handleOpen}
           value={journalState}
-          onChange={handleChange}
+          onChange={e =>setJournalState (e.target.value)}
         >
           <MenuItem value="jornada">
           </MenuItem>
@@ -90,7 +94,6 @@ const [open, setOpen] = React.useState(false);
           <MenuItem value={'Tarde'}>Tarde</MenuItem>
           <MenuItem value={'Completa'}>Completa</MenuItem>
         </Select>
-        {journalState}
       </FormControl>
       </div>
 
@@ -101,7 +104,7 @@ const [open, setOpen] = React.useState(false);
 
       <div>
       <FormControl className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">N de Personas</InputLabel>
+        <InputLabel id="demo-controlled-open-select-label">N° de Personas</InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
           id="demo-controlled-open-select"
@@ -109,7 +112,7 @@ const [open, setOpen] = React.useState(false);
           //onClose={handleClose}
           //onOpen={handleOpen}
           value={peopleState}
-          onChange={handlePeopleChange}
+          onChange={e =>setPeopleState (e.target.value)}
         >
           <MenuItem value="personas">
          
@@ -130,7 +133,6 @@ const [open, setOpen] = React.useState(false);
           <MenuItem value={14}>14</MenuItem>
           <MenuItem value={15}>15</MenuItem>
         </Select>
-        {peopleState}
       </FormControl>
       </div>
       <ReservationButton 

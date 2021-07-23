@@ -1,6 +1,6 @@
 import "./App.css";
+import "./css/FinalView.css"
 import Navbranch from "./component/Navbranch";
-//import DropdownButtons from "./component/DropdownButtons";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,20 +11,21 @@ import {
 import SignInSide from './component/SingInSide';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './themeConfig'
-//import ReservationButton from './component/ReservationButton';
-//import Calendar from './component/Calendar';
+import TypografyPage1 from './component/TypographyPage1';
+import FooterPage1 from "./component/FooterPage1";
 import Selector from './component/Selector'
 import Reservation from './component/Reservation'
+import FinalView from './component/FinalView.jsx'
 
 
 
 
 function App() {
   return (
-    
-   <Router>
+
+    <Router>
       {/*< ThemeProvider theme={theme} className="App">*/}
-    {/* <div>
+      {/* <div>
       <Link to= {SignInSide}>
 
       </Link>
@@ -33,24 +34,29 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/" exact>
-          < ThemeProvider theme={theme}>
-            <SignInSide/>
-          </ThemeProvider>
+            < ThemeProvider theme={theme}>
+              <SignInSide />
+            </ThemeProvider>
           </Route>
+          {/* comienzo pagina uno */}
           <Route path="/start">
             <Navbranch />
-            
+            <TypografyPage1 />
             <Selector/>
-
+            <FooterPage1 />
+          {/* final pagina uno */}
           </Route>
           <Route path="/reservation">
           <Reservation/>
           </Route>
+          <Route path="/finalview">
+            <FinalView/>
+          </Route>
         </Switch>
         {/*</ThemeProvider>*/}
-        </div>
+      </div>
     </Router>
-    
+
 
 
   );
