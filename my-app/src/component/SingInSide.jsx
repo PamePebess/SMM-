@@ -14,8 +14,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 
-
-
 //import FrameEverisColor from  '../img/FrameEverisColor.png'
 
 
@@ -68,9 +66,9 @@ const useStyles = makeStyles((theme) => ({
 export default function SignInSide(props) {
   const classes = useStyles();
 
-  let click = () => {
-    console.log('Home')
-  }
+//let click = () => {
+//   console.log('Home')
+// }
 
   return (
 

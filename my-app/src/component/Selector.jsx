@@ -104,7 +104,7 @@ const [open, setOpen] = React.useState(false);
 
       <div>
       <FormControl className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">N de Personas</InputLabel>
+        <InputLabel id="demo-controlled-open-select-label">N° de Personas</InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
           id="demo-controlled-open-select"

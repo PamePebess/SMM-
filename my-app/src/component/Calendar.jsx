@@ -19,7 +19,7 @@ export default function DatePickers() {
   const classes = useStyles();
 
   const [dateSelect, changeDateSelect]= /*useState(new Date());*/ useLocalStorage('dataSelect', '')
-  console.log(dateSelect)
+  //console.log(dateSelect)
   
   /*const dateReservation= (e) => {
     const dateUser = [e.target.value];  
