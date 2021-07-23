@@ -133,7 +133,11 @@ const [open, setOpen] = React.useState(false);
         {peopleState}
       </FormControl>
       </div>
-      <ReservationButton click = {click}/>
+      <ReservationButton 
+      click = {click}
+      
+      />
+      
     </div>
   );
 }
