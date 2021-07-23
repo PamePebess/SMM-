@@ -4,7 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, IconButton, Button } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
-import Logo from '../Img/FrameEverisColor.png';
+import Logo from '../img/FrameEverisColor.png';
 import styles from '../css/Navbranch.css';
 
 //Para que quede el mismo alto
