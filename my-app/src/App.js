@@ -1,5 +1,5 @@
 import "./App.css";
-import "./css/FinalView.css"
+//import "./css/FinalView.css"
 import Navbranch from "./component/Navbranch";
 import {
   BrowserRouter as Router,

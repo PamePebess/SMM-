@@ -1,3 +1,6 @@
-.mapa{
-    
+
+@media (max-width: 640px){
+    .mapa{
+        width: 400px;
+    }
 }
