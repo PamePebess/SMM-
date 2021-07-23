@@ -6,6 +6,8 @@ import ListItem from '@material-ui/core/ListItem';
 import Grid from '@material-ui/core/Grid';
 import ListItemText from '@material-ui/core/ListItemText';
 import mapa_1 from '../img/mapa_1.png'
+import {Fragment} from 'react';
+import styles from '../css/Reservation.css';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -30,8 +32,10 @@ export default function NestedList() {
 
   return (
 
+  <Fragment>
+  <img src={mapa_1} alt='mapaeveris' className='mapa'/>
+
   <Grid container component="main">
-      <img src={mapa_1} alt='mapaeveris' className='mapa'/>
      <Grid item xs={3}>
         <List
             component="nav"
@@ -167,7 +171,8 @@ export default function NestedList() {
             </ListItem>
         </List>
       </Grid>
-   </Grid> 
+   </Grid>
+   </Fragment>
   )
 
 }

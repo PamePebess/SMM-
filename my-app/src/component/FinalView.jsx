@@ -1,9 +1,10 @@
 import React from "react";
-import styles from '../css/FinalView.css';
+import {styles} from '../css/FinalView.css';
+
 
 const FinalView = () => {
   return (
-  <div>
+  <div className = 'finalViewContainer'>
   <h1>¡FELICITACIONES!</h1>
   <h3>TU RESERVA ESTÁ CONFIRMADA</h3>
   <h4></h4>
