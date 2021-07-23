@@ -174,12 +174,12 @@ export default function NestedList() {
             </ListItem>
         </List>
       </Grid>
-      <div>
+
+   </Grid> 
+   <div>
         <ButtonFi
         click = {click}/>
       </div>
-   </Grid> 
-   </Grid>
    </Fragment>
 
   )
