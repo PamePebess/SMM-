@@ -1,113 +1,173 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
+import { makeStyles } from '@material-ui/core/styles';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Grid from '@material-ui/core/Grid';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
+import mapa_1 from '../img/mapa_1.png'
 
-const StyledMenu = withStyles({
-  paper: {
-    border: '1px solid #d3d4d5',
-  },
-})((props) => (
-  <Menu
-    elevation={0}
-    getContentAnchorEl={null}
-    anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'center',
-    }}
-    transformOrigin={{
-      vertical: 'top',
-      horizontal: 'center',
-    }}
-    {...props}
-  />
-));
 
-const StyledMenuItem = withStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    '&:focus': {
-      backgroundColor: theme.palette.primary.main,
-      '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
-        color: theme.palette.common.white,
-      },
-    },
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper,
+
   },
-}))(MenuItem);
+  nested: {
+    paddingLeft: theme.spacing(4),
+  },
+}));
 
-export default function CustomizedMenus() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+export default function NestedList() {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(true);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
+  const handleClick = () => {
+    setOpen(!open);
   };
 
   return (
-    <div>
-      <Button
-        aria-controls="customized-menu"
-        aria-haspopup="true"
-        variant="contained"
-        color="primary"
-        onClick={handleClick}
-      >
-        
-      </Button>
 
-      <Button
-        aria-controls="customized-menu"
-        aria-haspopup="true"
-        variant="contained"
-        color="primary"
-        onClick={handleClick}
-      >
-        Open Menu
-      </Button>
+  <Grid container component="main">
+      <img src={mapa_1} alt='mapaeveris' className='mapa'/>
+     <Grid item xs={3}>
+        <List
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+            subheader={
+              <ListSubheader component="div" id="nested-list-subheader">
+                Zona de Trabajo
+              </ListSubheader>
+            }
+            className={classes.root}>
+            <ListItem button>
+              <ListItemText primary="G-1" />
+            </ListItem>
 
-      <Button
-        aria-controls="customized-menu"
-        aria-haspopup="true"
-        variant="contained"
-        color="primary"
-        onClick={handleClick}
-      >
-        Open Menu
-      </Button>
-      <StyledMenu
-        id="customized-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <StyledMenuItem>
-          <ListItemIcon>
-            <SendIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="Sent mail" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemIcon>
-            <DraftsIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="Drafts" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemIcon>
-            <InboxIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="Inbox" />
-        </StyledMenuItem>
-      </StyledMenu>
-    </div>
-  );
+            <ListItem button>
+            <ListItemText primary="G-2" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-3" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-4" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-5" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-6" />
+            </ListItem>
+
+            
+            <ListItem button onClick={handleClick}>
+              <ListItemText primary="G-7" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-8" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-9" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-10" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-11" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-12" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-13" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-14" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="G-15" />
+            </ListItem>
+
+    
+        </List>
+      </Grid>
+
+      <Grid item xs={3}>
+      <List
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+            subheader={
+              <ListSubheader component="div" id="nested-list-subheader">
+                Sala de Reuniones
+              </ListSubheader>
+            }
+            className={classes.root}>
+            <ListItem button>
+              <ListItemText primary="Sala - A" />
+            </ListItem>
+
+            <ListItem button>
+            <ListItemText primary="Sala - B" />
+            </ListItem>
+            
+            <ListItem button onClick={handleClick}>
+              <ListItemText primary="Sala - C" />
+            </ListItem>
+            
+            <ListItem button onClick={handleClick}>
+              <ListItemText primary="Sala - D" />
+            </ListItem>
+            
+            <ListItem button onClick={handleClick}>
+              <ListItemText primary="Sala - E" />
+            </ListItem>
+            
+            <ListItem button onClick={handleClick}>
+              <ListItemText primary="Sala - F" />
+            </ListItem>
+            
+            <ListItem button onClick={handleClick}>
+              <ListItemText primary="Sala - G" />
+            </ListItem>
+            
+            <ListItem button onClick={handleClick}>
+              <ListItemText primary="Sala - H" />
+            </ListItem>
+
+        </List> 
+        </Grid>
+
+        <Grid item xs={3}>
+          <List
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+            subheader={
+              <ListSubheader component="div" id="nested-list-subheader">
+                Privado
+              </ListSubheader>
+            }
+            className={classes.root}>
+            <ListItem button onClick={handleClick}>
+              <ListItemText primary="Sala - I" />
+            </ListItem>
+        </List>
+      </Grid>
+   </Grid> 
+  )
+
 }
