@@ -6,8 +6,10 @@ import ListItem from '@material-ui/core/ListItem';
 import Grid from '@material-ui/core/Grid';
 import ListItemText from '@material-ui/core/ListItemText';
 import mapa_1 from '../img/mapa_1.png'
+import ButtonFi from './ButtonFi';
 import {Fragment} from 'react';
 import styles from '../css/Reservation.css';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,12 +31,13 @@ export default function NestedList() {
   const handleClick = () => {
     setOpen(!open);
   };
-
+  const click = () => {
+    console.log('click')
+}
   return (
 
   <Fragment>
   <img src={mapa_1} alt='mapaeveris' className='mapa'/>
-
   <Grid container component="main">
      <Grid item xs={3}>
         <List
@@ -109,10 +112,10 @@ export default function NestedList() {
 
     
         </List>
-      </Grid>
+          </Grid>
 
-      <Grid item xs={3}>
-      <List
+        <Grid item xs={3}>
+        <List
             component="nav"
             aria-labelledby="nested-list-subheader"
             subheader={
@@ -171,8 +174,14 @@ export default function NestedList() {
             </ListItem>
         </List>
       </Grid>
+      <div>
+        <ButtonFi
+        click = {click}/>
+      </div>
+   </Grid> 
    </Grid>
    </Fragment>
+
   )
 
 }
