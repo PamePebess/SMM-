@@ -11,12 +11,11 @@ import {
 import SignInSide from './component/SingInSide';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './themeConfig'
-//import ControlledOpenSelect from './component/Selector'
 import TypografyPage1 from './component/TypographyPage1';
 import FooterPage1 from "./component/FooterPage1";
 import Selector from './component/Selector'
 import Reservation from './component/Reservation'
-import FinalView from './component/FinalView'
+import FinalView from './component/FinalView.jsx'
 
 
 
@@ -48,7 +47,10 @@ function App() {
           {/* final pagina uno */}
           </Route>
           <Route path="/reservation">
+          <Navbranch />
+          
           <Reservation/>
+          <FooterPage1 />
           </Route>
           <Route path="/finalview">
             <FinalView/>
