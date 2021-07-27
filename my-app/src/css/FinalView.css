@@ -5,27 +5,20 @@
     align-items: center;
     justify-content: center;
 }
-
-
 #infoContainer{
 }
-
-
 #title {
     font-family: Helvetica;
     color: white;
     font-weight: bolder;
     text-align: center;
-
 }
-
 #subtitle {
     font-family: Helvetica;
     color: white;
     text-align: center;
     font-weight: bolder;
     margin-top: 100px;
-    
 }
 #cancel {
     font-family: Helvetica;
